@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>BlurTalk</title>
+</head>
+<body class="min-h-screen bg-zinc-950 flex items-center justify-center relative overflow-hidden">
+    <div class="absolute w-96 h-96 bg-blue-600 rounded-full blur-[150px] opacity-30"></div>
+    <div class="absolute w-96 h-96 bg-purple-600 rounded-full blur-[150px] opacity-30"></div>
+    <div class="relative bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl shadow-2xl p-10 text-white w-1/4">
+        <h1 class="text-4xl font-bold text-center mb-2 tracking-tight">
+            Blur<span class="text-blue-500">Talk</span>
+        </h1>
+        <p class="text-center text-zinc-400 mb-8 text-sm">
+            Anonymous. Honest. Blur your identity.
+        </p>
+        <form action="/login" method="post" class="flex flex-col gap-5">
+            <input
+                class="bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
+                type="email"
+                placeholder="Email"
+                name="email"
+                required>
+            <input
+                class="bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
+                type="password"
+                placeholder="Password"
+                minlength="8"
+                name="pass"
+                required>
+            <button
+                class="bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-xl py-3 font-semibold text-lg shadow-lg hover:shadow-blue-600/40">
+                Login
+            </button>
+        </form>
+        <div class="flex items-center my-6">
+            <div class="flex-1 h-px bg-zinc-700"></div>
+            <span class="px-3 text-zinc-500 text-sm">or</span>
+            <div class="flex-1 h-px bg-zinc-700"></div>
+        </div>
+        <form action="/registernow" method="post">
+            <button
+                class="w-full bg-zinc-800 hover:bg-zinc-700 transition rounded-xl py-3 text-sm text-zinc-300 border border-zinc-700">
+                Don’t have an account? Sign up
+            </button>
+        </form>
+    </div>
+</body>
+</html>

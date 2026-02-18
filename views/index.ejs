@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>BlurTalk</title>
+</head>
+<body class="min-h-screen bg-zinc-950 flex items-center justify-center relative overflow-hidden">
+    <div class="absolute bg-blue-600 rounded-full blur-[180px] opacity-30"></div>
+    <div class="absolute bg-purple-600 rounded-full blur-[180px] opacity-30"></div>
+    <div class="relative bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl shadow-2xl p-16 text-center text-white max-w-xl w-full">
+        <h1 class="text-5xl font-bold tracking-tight mb-4">
+            Blur<span class="text-blue-500">Talk</span>
+        </h1>
+        <p class="text-zinc-400 text-lg mb-10">
+            Speak freely. Stay anonymous.
+            Your voice matters — not your identity.
+        </p>
+        <a href="/register"
+           class="inline-block bg-blue-600 hover:bg-blue-700 transition duration-200 px-10 py-4 rounded-2xl text-xl font-semibold shadow-lg hover:shadow-blue-600/40">
+            Let’s Get Started
+        </a>
+        <div class="mt-6 text-sm text-zinc-500">
+            Already have an account?
+            <a href="/login" class="text-blue-400 hover:underline ml-1">
+                Login
+            </a>
+        </div>
+    </div>
+</body>
+</html>

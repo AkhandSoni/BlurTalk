@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>BlurTalk - Edit Post</title>
+</head>
+<body class="min-h-screen bg-zinc-950 flex items-center justify-center relative overflow-hidden">
+    <div class="absolute bg-blue-600 rounded-full blur-[180px] opacity-20"></div>
+    <div class="absolute bg-purple-600 rounded-full blur-[180px] opacity-20"></div>
+    <div class="relative bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl shadow-2xl p-10 w-full max-w-2xl text-white">
+        <h1 class="text-4xl font-bold text-center mb-6 text-white">Edit Post</h1>
+        <form action="/edit" method="post" class="flex flex-col gap-6">
+            <input type="hidden" name="pid" value="<%= pid %>">
+            <textarea name="content"
+                class="bg-zinc-800 border border-zinc-700 rounded-2xl p-4 text-lg resize-none h-56 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
+                placeholder="Edit your post..."><%= content %></textarea>
+            <div class="flex justify-between">
+                <a href="/profile" class="bg-zinc-700 hover:bg-zinc-600 transition px-6 py-3 rounded-xl font-semibold">Cancel</a>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-blue-600/40">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
